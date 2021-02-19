@@ -1,14 +1,14 @@
 import React from "react"
 
-function App({name}) {
-  const handleClick = () => {
-    alert(name);
+function App() {
+  const handleClick = (num) => {
+    alert(num);
   }
 
   return (
   <div class = "cal">
     <div id = "arr1">
-      <button onClick={handleClick}>1</button>
+      <button onClick={handleClick("1")}>1</button>
       <button onClick={handleClick}>2</button>
       <button onClick={handleClick}>3</button>
       <button onClick={handleClick}>/</button>
