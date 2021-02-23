@@ -2,7 +2,8 @@ import React from "react"
 
 class App extends React.Component {
   // state = {
-  //   result: 0
+  //   result: 0,
+  //   arr: []
   // };
   constructor(){
     super();
@@ -11,128 +12,22 @@ class App extends React.Component {
       arr: []
     };
   }
-   handleClick_1= async () => {
+  handleClick_1 = () => {
+    this.App = this.App.bind (this);
     const {arr} = this.state;
-    await this.setState({
+    this.setState({
       arr: arr.concat(1)
     })
     //alert(1);
     console.log(this.state.arr)
   }
-  handleClick_2= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat(2)
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_3= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat(3)
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
-  handleClick_4= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat(4)
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_5= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat(5)
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
-  handleClick_6= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat(6)
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_7= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat(7)
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
-  handleClick_8= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat(8)
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_9= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat(9)
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
-  handleClick_0= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat(0)
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_plus= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat("+")
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
-  handleClick_minus= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat("-")
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_multiple= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat("*")
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
-  handleClick_division= () => {
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat("/")
-    })
-    //alert(2);
-    console.log(this.state.arr)
-  }
-  handleClick_doubleZero= async () => {
-    const {arr} = this.state;
-    await this.setState({
-      arr: arr.concat("00")
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
 
-
+  handleClick_division = () => {
+    this.setState({ arr : [...this.state.arr, "/"] });
+    //alert(1);
+    console.log(this.state.arr)
+  }
+  
   render(){
     const {result} = this.state;
     const {arr} = this.state.arr;
