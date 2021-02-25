@@ -1,36 +1,31 @@
 import React from "react"
 
-class App extends React.Component {
-  // state = {
-  //   result: 0,
-  //   arr: []
-  // };
-  constructor(){
-    super();
-    this.state = {
-      result: 0,
-      arr: []
-    };
-  }
-  handleClick_1 = () => {
-    this.App = this.App.bind (this);
-    const {arr} = this.state;
-    this.setState({
-      arr: arr.concat(1)
-    })
-    //alert(1);
-    console.log(this.state.arr)
-  }
+const result = {
+  answer: 0,
+  arr: []
+}
+function handleClick_1({answer, arr}){
+  // //this.App = this.App.bind (this);
+  // const {arr} = this.state.arr;
+  // this.setState({
+  //   arr: {arr}.concat(1)
+  // })
+  // //alert(1);
+  // console.log(this.state.arr)
+  {arr} = {arr}.concat(1);
+  console.log(arr);
+}
 
-  handleClick_division = () => {
-    this.setState({ arr : [...this.state.arr, "/"] });
-    //alert(1);
-    console.log(this.state.arr)
-  }
+function App(){
+
   
-  render(){
-    const {result} = this.state;
-    const {arr} = this.state.arr;
+
+  // handleClick_division = () => {
+  //   const {arr} = this.state.arr;
+  //   this.setState({ arr : [...this.state.arr, "/"] });
+  //   //alert(1);
+  //   console.log(this.state.arr)
+  // }
     const style = {
       backgroundColor: 'skyblue',
       padding: '30px',
@@ -44,7 +39,7 @@ class App extends React.Component {
         <h1 name = "window">Window Here</h1>
       </div>
       <div id = "arr1">
-        <button onClick={this.handleClick_1} style={style}>1</button>
+        <button onClick={handleClick_1} style={style}>1</button>
         <button onClick={this.handleClick_2} style={style}>2</button>
         <button onClick={this.handleClick_3} style={style}>3</button>
         <button onClick={this.handleClick_division} style={style}>/</button>
@@ -70,5 +65,4 @@ class App extends React.Component {
     </div>
     );
   }
-}
 export default App;
